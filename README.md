@@ -96,7 +96,15 @@ Para replicar esta análise, siga os passos abaixo:
     ```
 
 ## 📂 Estrutura do Repositório
-
+.
+├── 📁 dados/
+│   ├── olist_customers_dataset.csv
+│   └── ... (outros arquivos)
+├── 📄 analise_e-commerce_olist.ipynb
+├── 📄 .gitignore
+├── 📄 LICENSE
+├── 📄 README.md
+└── 📄 requirements.txt
 
 ## 👨‍💻 Autor
 
