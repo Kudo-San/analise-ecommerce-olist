@@ -59,7 +59,7 @@ Para replicar esta análise, siga os passos abaixo:
 
 1.  **Clone o repositório:**
     ```bash
-    git clone [https://github.com/seu-usuario/seu-repositorio.git](https://github.com/seu-usuario/seu-repositorio.git)
+    git clone https://github.com/Kudo-San/analise-ecommerce-olist.git
     ```
 
 2.  **Navegue até a pasta do projeto:**
