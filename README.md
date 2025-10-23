@@ -1,3 +1,7 @@
+
+<img width="1024" height="750" alt="Gemini_Generated_Image_4vx6hq4vx6hq4vx6" src="https://github.com/user-attachments/assets/301fc04c-6d6f-4e2e-8307-5f17b59a90aa" />
+
+
 # 📊 Análise Exploratória de Dados do E-commerce Olist
 
 Este repositório contém uma análise exploratória de dados (EDA) detalhada sobre o dataset público de e-commerce brasileiro da Olist. O objetivo deste projeto é extrair insights valiosos sobre o comportamento de vendas, a satisfação do cliente, o desempenho de categorias e vendedores, padrões de pagamento e a segmentação de clientes.
@@ -96,15 +100,13 @@ Para replicar esta análise, siga os passos abaixo:
     ```
 
 ## 📂 Estrutura do Repositório
-.
-├── 📁 dados/
-│   ├── olist_customers_dataset.csv
-│   └── ... (outros arquivos)
-├── 📄 analise_e-commerce_olist.ipynb
-├── 📄 .gitignore
-├── 📄 LICENSE
-├── 📄 README.md
-└── 📄 requirements.txt
+
+* ├── 📁 `Analise_E-commerce/` : Pasta dos arquivos.
+* │   ├── 📁 `Varios dataset olist.csv` : Pasta com os dados da Olist.
+* 📄 `analise_e-commerce_olist.ipynb` : O Jupyter Notebook com todo o código da análise.
+* 📄 `.gitignore`
+* 📄 `README.md` :Este arquivo de documentação.
+* 📄 `requirements.txt` : Arquivo com as bibliotecas Python necessárias.
 
 ## 👨‍💻 Autor
 **Marcelo Kudo**
