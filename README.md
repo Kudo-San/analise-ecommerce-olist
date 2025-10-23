@@ -107,5 +107,25 @@ Para replicar esta análise, siga os passos abaixo:
 └── 📄 requirements.txt
 
 ## 👨‍💻 Autor
-
 **Marcelo Kudo**
+
+## 💬 Sobre mim
+
+**Engenheiro de Machine Learning & Especialista em Automação Industrial**  
+💡 **Foco:** IIoT | Análise de Dados | IA Industrial  
+
+Profissional com **+18 anos de experiência em tecnologia** unindo **Automação Industrial**, **Análise de Dados** e **Inteligência Artificial**, aplicando tecnologia para otimizar processos industriais.  
+Desenvolvo **modelos de Machine Learning** voltados à **manutenção preditiva** e **otimização de desempenho**, com foco em **integração direta com sistemas de controle**.
+
+---
+
+### ⚙️ Competências Técnicas
+- 🧠 **Machine Learning:** TensorFlow, PyTorch, Keras  
+- 🐍 **Programação:** Python (Pandas, NumPy), SQL  
+- 📊 **Análise e Visualização:** Power BI, Dashboards de KPI’s  
+- 🏭 **Automação & IIoT:** CLPs, IHMs, Edge AI, Rockwell, Mitsubishi, Schneider, além de Edge AI e sistemas de visão embarcada.
+
+---
+
+🎯 **Missão:** Conectar **Inteligência Artificial à operação fabril**, transformando dados em decisões automatizadas e resultados reais.  
+🚀 **Interesses:** Indústria 4.0, MLOps, Edge Computing e Realidades Aumentada e Mista.
