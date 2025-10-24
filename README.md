@@ -40,8 +40,8 @@ Para transformar os insights em uma ferramenta preditiva, foi desenvolvido um mo
 
 * **Problema de Negócio:** Prever se um cliente ficará insatisfeito (nota de avaliação de 1 a 3) com base nos dados do pedido.
 * **Metodologia:** Foi treinado um modelo `RandomForestClassifier`. A técnica **SMOTE** foi utilizada para tratar o desbalanceamento de classes (muito mais clientes satisfeitos do que insatisfeitos), garantindo que o modelo aprendesse a identificar corretamente a classe minoritária.
-* **Performance:** O modelo final alcançou uma performance robusta, com foco principal em **identificar corretamente os clientes insatisfeitos (Recall)**, conseguindo capturar **[INSERA AQUI O VALOR DO RECALL DA CLASSE '1' DO SEU MODELO FINAL, ex: 65%]** dos clientes verdadeiramente insatisfeitos no conjunto de teste.
-* **Principal Conclusão do Modelo:** A análise de *feature importance* confirmou que o **`tempo_de_entrega`** é, de longe, o fator mais preditivo para a insatisfação, validando a principal descoberta da nossa EDA e fornecendo uma direção clara para a otimização do negócio.
+* **Performance:** O modelo final alcançou uma boa performance, com foco principal em **identificar corretamente os clientes insatisfeitos (Recall)**, conseguindo capturar **45%** dos clientes verdadeiramente insatisfeitos no conjunto de teste.
+* **Principal Conclusão do Modelo:** A análise de *feature importance* confirmou que o **`tempo_de_entrega`** é, de longe, o fator mais preditivo para a insatisfação, validando a principal descoberta da EDA e fornecendo uma direção clara para a otimização do negócio.
 
 ---
 
@@ -61,13 +61,13 @@ O projeto está organizado de forma modular para garantir clareza e reprodutibil
 
 ```
 /
-|--📁.venv/                # Ambiente virtual com as dependências
+|--📁.venv/                 # Ambiente virtual com as dependências
 |--📁 dados/                # Contém todos os arquivos .csv do dataset Olist
 |--📁 notebooks/            # Contém os notebooks da análise e do modelo
 |   |--📄01_analise_exploratoria.ipynb
 |   |--📄02_modelo_ml_satisfacao.ipynb
 |--📄 README.md             # Este arquivo de documentação
-|--📄requirements.txt      # Arquivo com as bibliotecas Python necessárias
+|--📄requirements.txt       # Arquivo com as bibliotecas Python necessárias
 ```
 
 ---
