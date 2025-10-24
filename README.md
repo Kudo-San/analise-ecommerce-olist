@@ -80,7 +80,7 @@ O projeto está organizado de forma modular para garantir clareza e reprodutibil
     ```
 2.  **Navegue até a pasta do projeto:**
     ```bash
-    cd [NOME_DO_SEU_REPOSITORIO]
+    cd [Analise_E-commerce]
     ```
 3.  **Crie e ative o ambiente virtual:**
     ```bash
