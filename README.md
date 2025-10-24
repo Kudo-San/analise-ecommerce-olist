@@ -1,120 +1,107 @@
-
 <img width="1024" height="750" alt="Gemini_Generated_Image_4vx6hq4vx6hq4vx6" src="https://github.com/user-attachments/assets/301fc04c-6d6f-4e2e-8307-5f17b59a90aa" />
 
+# 📊 Análise de Dados e Modelo de Machine Learning para o E-commerce Olist
 
-# 📊 Análise Exploratória de Dados do E-commerce Olist
+![Python](https://img.shields.io/badge/Python-3.11%2B-%233776AB?logo=python)
+![Pandas](https://img.shields.io/badge/Pandas-Análise-%23150458?logo=pandas)
+![Seaborn](https://img.shields.io/badge/Seaborn-Visualização-%233776AB?logo=seaborn)
+![Scikit-Learn](https://img.shields.io/badge/Scikit--Learn-ML-%23F7931E?logo=scikit-learn)
 
-Este repositório contém uma análise exploratória de dados (EDA) detalhada sobre o dataset público de e-commerce brasileiro da Olist. O objetivo deste projeto é extrair insights valiosos sobre o comportamento de vendas, a satisfação do cliente, o desempenho de categorias e vendedores, padrões de pagamento e a segmentação de clientes.
+Este repositório contém um projeto completo de Ciência de Dados, desde uma análise exploratória de dados (EDA) detalhada até a construção de um modelo de Machine Learning para prever a satisfação do cliente, utilizando o dataset público de e-commerce brasileiro da Olist.
 
-A análise foi conduzida utilizando Python em um ambiente Jupyter Notebook, com foco na manipulação de dados e na criação de visualizações claras para comunicar as descobertas.
+---
+
+## 🎯 Objetivo do Projeto
+
+O objetivo principal deste projeto é duplo:
+
+1.  **Análise Exploratória (EDA):** Realizar uma investigação profunda nos dados para extrair insights acionáveis sobre a performance do negócio, incluindo padrões de vendas, geografia de clientes e vendedores, logística, satisfação do cliente e desempenho das categorias de produtos.
+2.  **Machine Learning:** Construir e avaliar um modelo de classificação capaz de prever a probabilidade de um cliente ficar insatisfeito (dar uma nota de avaliação baixa), permitindo que a empresa atue proativamente para mitigar experiências negativas.
+
+---
+
+## 🚀 Principais Insights e Descobertas
+
+A análise revelou diversos padrões e oportunidades de melhoria para o negócio:
+
+* **Insight 1: Tempo de Entrega é o Fator Crítico para a Satisfação.** A EDA e o modelo de Machine Learning confirmaram que o tempo de entrega é o principal fator que influencia a nota de avaliação do cliente. Pedidos com notas baixas (1-3) tiveram uma mediana de entrega significativamente maior do que os com notas altas (4-5).
+
+* **Insight 2: Concentração Geográfica de Clientes e Vendedores.** O faturamento é massivamente concentrado em clientes e vendedores do estado de São Paulo (SP), que atua tanto como o principal mercado consumidor quanto como o principal polo de vendas.
+
+* **Insight 3: Alta Competitividade e Renovação na Elite de Vendedores.** A análise anual dos top vendedores mostrou que a liderança do mercado é altamente dinâmica, com poucos vendedores conseguindo se manter no topo por anos consecutivos, indicando um ecossistema saudável e competitivo.
+
+* **Insight 4: Segmentação RFM Revela Oportunidades de Marketing.** A análise RFM (Recência, Frequência, Valor Monetário) mostrou que uma grande parte da base de clientes se enquadra nos segmentos "Hibernando" ou "Em Risco", indicando uma grande oportunidade para campanhas de reativação. O segmento "Campeões", embora pequeno, é responsável por uma parcela desproporcional do faturamento.
+
+---
+
+## 🤖 Modelo de Machine Learning: Previsão de Satisfação
+
+Para transformar os insights em uma ferramenta preditiva, foi desenvolvido um modelo de Machine Learning.
+
+* **Problema de Negócio:** Prever se um cliente ficará insatisfeito (nota de avaliação de 1 a 3) com base nos dados do pedido.
+* **Metodologia:** Foi treinado um modelo `RandomForestClassifier`. A técnica **SMOTE** foi utilizada para tratar o desbalanceamento de classes (muito mais clientes satisfeitos do que insatisfeitos), garantindo que o modelo aprendesse a identificar corretamente a classe minoritária.
+* **Performance:** O modelo final alcançou uma performance robusta, com foco principal em **identificar corretamente os clientes insatisfeitos (Recall)**, conseguindo capturar **[INSERA AQUI O VALOR DO RECALL DA CLASSE '1' DO SEU MODELO FINAL, ex: 65%]** dos clientes verdadeiramente insatisfeitos no conjunto de teste.
+* **Principal Conclusão do Modelo:** A análise de *feature importance* confirmou que o **`tempo_de_entrega`** é, de longe, o fator mais preditivo para a insatisfação, validando a principal descoberta da nossa EDA e fornecendo uma direção clara para a otimização do negócio.
+
+---
 
 ## 🛠️ Tecnologias e Bibliotecas Utilizadas
 
-* **Python 3**
-* **Pandas:** Para manipulação e análise dos dataframes.
-* **Matplotlib & Seaborn:** Para a criação de gráficos e visualizações de dados.
-* **NumPy:** Para operações numéricas.
-* **Jupyter Notebook:** Como ambiente de desenvolvimento interativo.
+* **Linguagem:** Python
+* **Análise de Dados:** Pandas, NumPy
+* **Visualização de Dados:** Matplotlib, Seaborn
+* **Machine Learning:** Scikit-learn, Imbalanced-learn (para SMOTE)
+* **Ambiente:** Jupyter Notebook, VS Code
 
-## 📦 Dataset
+---
 
-O conjunto de dados utilizado é o [Brazilian E-Commerce Public Dataset by Olist](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce), disponível no Kaggle. Ele contém informações sobre cerca de 100.000 pedidos realizados entre 2016 e 2018, distribuídos em múltiplos arquivos que abrangem:
+## 📂 Estrutura do Projeto
 
-* Pedidos (orders)
-* Clientes (customers)
-* Itens do pedido (order_items)
-* Pagamentos (payments)
-* Avaliações (reviews)
-* Produtos (products)
-* Vendedores (sellers)
-* Geolocalização (geolocation)
+O projeto está organizado de forma modular para garantir clareza e reprodutibilidade, seguindo as melhores práticas da indústria:
 
-## 📈 Análises Realizadas e Principais Insights
+```
+/
+|--📁.venv/                # Ambiente virtual com as dependências
+|--📁 dados/                # Contém todos os arquivos .csv do dataset Olist
+|--📁 notebooks/            # Contém os notebooks da análise e do modelo
+|   |--📄01_analise_exploratoria.ipynb
+|   |--📄02_modelo_ml_satisfacao.ipynb
+|--📄 README.md             # Este arquivo de documentação
+|--📄requirements.txt      # Arquivo com as bibliotecas Python necessárias
+```
 
-O notebook aborda diversas questões de negócio, gerando insights importantes:
+---
 
-1.  **Análise de Faturamento por Estado:**
-    * **Pergunta:** Onde estão concentradas as vendas da Olist?
-    * **Insight:** O faturamento é fortemente concentrado na Região Sudeste, com São Paulo representando a maior parte das receitas.
-
-2.  **Relação entre Tempo de Entrega e Satisfação do Cliente:**
-    * **Pergunta:** Clientes que recebem seus produtos mais rápido dão notas melhores?
-    * **Insight:** Sim, existe uma forte correlação. O tempo mediano de entrega para avaliações nota 1 é quase o dobro do tempo para avaliações nota 5, indicando que a logística é um fator crítico para a satisfação.
-
-3.  **Análise de Categorias de Produtos:**
-    * **Pergunta:** As categorias que mais vendem em volume são as que mais faturam?
-    * **Insight:** Não necessariamente. Categorias como "Cama, Mesa e Banho" lideram em ambos, mas categorias com "ticket médio" (preço médio) mais alto, como "Relógios e Presentes", aparecem no topo de faturamento sem estar no topo de volume de vendas.
-
-4.  **Análise de Vendedores (Sellers):**
-    * **Pergunta:** O sucesso é concentrado em poucos vendedores? Onde eles estão?
-    * **Insight:** O mercado de vendedores é dinâmico, com a elite de top sellers se renovando a cada ano. A maior parte do faturamento gerado por vendedores também está concentrada no estado de São Paulo.
-
-5.  **Análise de Pagamentos:**
-    * **Pergunta:** Como os clientes pagam e parcelam suas compras?
-    * **Insight:** O cartão de crédito é o método dominante. A análise de parcelamento mostra uma preferência por pagamentos à vista (1x), mas com um volume considerável de compras parceladas em 2, 3 e 10 vezes.
-
-6.  **Segmentação de Clientes (RFM):**
-    * **Técnica:** Utilização do modelo RFM (Recência, Frequência, Valor Monetário) para criar segmentos de clientes.
-    * **Insight:** A análise identificou perfis distintos como "Campeões" (compram muito e com frequência), "Clientes em Risco" (compraram bem, mas há muito tempo) e "Clientes Hibernando" (a maior base, com compras antigas e de baixo valor), permitindo a criação de estratégias de marketing direcionadas.
-
-## 🚀 Como Executar o Projeto
-
-Para replicar esta análise, siga os passos abaixo:
+## ⚙️ Como Executar o Projeto
 
 1.  **Clone o repositório:**
     ```bash
     git clone https://github.com/Kudo-San/analise-ecommerce-olist.git
     ```
-
 2.  **Navegue até a pasta do projeto:**
     ```bash
-    cd seu-repositorio
+    cd [NOME_DO_SEU_REPOSITORIO]
     ```
-
-3.  **Crie e ative um ambiente virtual (recomendado):**
+3.  **Crie e ative o ambiente virtual:**
     ```bash
-    # Para Windows
     python -m venv .venv
-    .venv\Scripts\activate
-
-    # Para macOS/Linux
-    python3 -m venv .venv
-    source .venv/bin/activate
+    .\.venv\Scripts\activate
     ```
-
-4.  **Crie o arquivo de dependências `requirements.txt`:**
-    * No seu terminal com o ambiente ativado, execute o comando abaixo para gerar o arquivo com as bibliotecas que você usou:
-    ```bash
-    pip freeze > requirements.txt
-    ```
-    * **Importante:** Se você ainda não instalou as bibliotecas, instale-as primeiro (`pip install pandas matplotlib seaborn jupyter`) e depois gere o arquivo.
-
-5.  **Instale as dependências (para outra pessoa que clonar seu repositório):**
+4.  **Instale as dependências:**
+    *(Nota: Antes de enviar para o GitHub, rode o comando `pip freeze > requirements.txt` no seu terminal ativado para criar este arquivo.)*
     ```bash
     pip install -r requirements.txt
     ```
+5.  **Abra a pasta `notebooks` e execute os arquivos `.ipynb` em ordem.**
 
-6.  **Inicie o Jupyter Notebook:**
-    ```bash
-    jupyter notebook analise_e-commerce_olist.ipynb
-    ```
-
-## 📂 Estrutura do Repositório
-
-* ├── 📁 `Analise_E-commerce/` : Pasta dos arquivos.
-* │   ├── 📁 `Varios dataset olist.csv` : Pasta com os dados da Olist.
-* 📄 `analise_e-commerce_olist.ipynb` : O Jupyter Notebook com todo o código da análise.
-* 📄 `.gitignore`
-* 📄 `README.md` :Este arquivo de documentação.
-* 📄 `requirements.txt` : Arquivo com as bibliotecas Python necessárias.
+---
 
 ## 👨‍💻 Autor
 **Marcelo Kudo**
 
 ## 💬 Sobre mim
 
-**Engenheiro de Machine Learning & Especialista em Automação Industrial**  
-💡 **Foco:** IIoT | Análise de Dados | IA Industrial  
+**Engenheiro de Machine Learning & Especialista em Automação Industrial** 💡 **Foco:** IIoT | Análise de Dados | IA Industrial  
 
 Profissional com **+18 anos de experiência em tecnologia** unindo **Automação Industrial**, **Análise de Dados** e **Inteligência Artificial**, aplicando tecnologia para otimizar processos industriais.  
 Desenvolvo **modelos de Machine Learning** voltados à **manutenção preditiva** e **otimização de desempenho**, com foco em **integração direta com sistemas de controle**.
@@ -131,3 +118,12 @@ Desenvolvo **modelos de Machine Learning** voltados à **manutenção preditiva*
 
 🎯 **Missão:** Conectar **Inteligência Artificial à operação fabril**, transformando dados em decisões automatizadas e resultados reais.  
 🚀 **Interesses:** Indústria 4.0, MLOps, Edge Computing e Realidades Aumentada e Mista.
+
+[comment]: <> (Link para o LinkedIn)
+[<img align="left" alt="Marcelo Kudo | LinkedIn" width="24px" src="https://www.vectorlogo.zone/logos/linkedin/linkedin-icon.svg" />][linkedin]
+
+[comment]: <> (Link para o GitHub)
+[<img align="left" alt="Marcelo Kudo | GitHub" width="24px" src="https://www.vectorlogo.zone/logos/github/github-tile.svg" />][github]
+
+[linkedin]: https://www.linkedin.com/in/[SEU_LINKEDIN_AQUI]
+[github]: https://github.com/[SEU_USUARIO_DO_GITHUB]
