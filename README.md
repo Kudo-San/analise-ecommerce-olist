@@ -116,9 +116,6 @@ Desenvolvo **modelos de Machine Learning** voltados à **manutenção preditiva*
 
 ---
 
-🎯 **Missão:** Conectar **Inteligência Artificial à operação fabril**, transformando dados em decisões automatizadas e resultados reais.  
-🚀 **Interesses:** Indústria 4.0, MLOps, Edge Computing e Realidades Aumentada e Mista.
-
 [comment]: <> (Link para o LinkedIn)
 [<img align="left" alt="Marcelo Kudo | LinkedIn" width="24px" src="https://www.vectorlogo.zone/logos/linkedin/linkedin-icon.svg" />][linkedin]
 
